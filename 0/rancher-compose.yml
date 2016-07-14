@@ -1,0 +1,23 @@
+.catalog:
+  name: Redmine
+  version: Latest
+  description: |
+    Redmine
+  minimum_rancher_version: v0.56.0
+  maintainer: "Go Chiba <go.chiba@gmail.com>"
+  uuid: redmine-0
+
+redmine:
+  scale: 1
+  retain_ip: true
+  health_check:
+    port: 3000
+    interval: 30000
+    unhealthy_threshold: 3
+    strategy: recreate
+    response_timeout: 2000
+    healthy_threshold: 2
+
+postgres:
+  scale: 1
+  retain_ip: true
