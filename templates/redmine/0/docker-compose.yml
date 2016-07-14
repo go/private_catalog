@@ -9,8 +9,6 @@ redmine:
     POSTGRES_ENV_POSTGRES_DB: redmine
   volumes:
     - redmine_data:/usr/src/redmine/files
-  depends_on:
-    - postgres
   links:
     - "postgres:postgres"
 postgres:
