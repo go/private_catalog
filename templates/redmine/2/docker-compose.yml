@@ -1,5 +1,5 @@
 redmine:
-  image: redmine:latest
+  image: redmine:3.1
   ports:
     - 3000:3000
   environment:
