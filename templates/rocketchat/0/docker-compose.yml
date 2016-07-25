@@ -1,9 +1,9 @@
 mage: mongo
-# volumes:
+  volumes:
+    - ${volume_name}:/data/db
+      volume_driver: ${storage_pool}
 #    - ./data/runtime/db:/data/db
 #    - ./data/dump:/dump
-     - ${volume_name}:/data/db
-       volume_driver: ${storage_pool}
   command: mongod --smallfiles --oplogSize 128
 
 rocketchat:
