@@ -1,4 +1,4 @@
-mage: mongo
+image: mongo
   volumes:
     - ${volume_name}:/data/db
       volume_driver: ${storage_pool}
