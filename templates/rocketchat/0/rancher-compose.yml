@@ -5,18 +5,18 @@
   uuid: rocketchat-0
   minimum_rancher_version: v0.51.0
   questions:
-    - variable: volume_name
-      description: "Name of Database Volume"
-      label: "Database volume"
-      type: "string"
-      required: true
-      default: "rocketchat"
-    - variable: storage_pool
-      description: "Name of Storage Pool"
-      label: "Storage Pool"
-      type: "string"
-      required: true
-      default: "convoy-nfs"
+#    - variable: volume_name
+#      description: "Name of Database Volume"
+#      label: "Database volume"
+#      type: "string"
+#      required: true
+#      default: "rocketchat"
+#    - variable: storage_pool
+#      description: "Name of Storage Pool"
+#      label: "Storage Pool"
+#      type: "string"
+#      required: true
+#      default: "convoy-nfs"
 
 
 rocketchat:
