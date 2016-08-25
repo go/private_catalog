@@ -5,7 +5,7 @@ lb:
   links:
     - redmine:redmine
 redmine:
-  image: redmine:3.1
+  image: redmine:latest
   environment:
     POSTGRES_PORT_5432_TCP: postgres
     POSTGRES_ENV_POSTGRES_USER: redmine
