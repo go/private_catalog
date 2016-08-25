@@ -4,7 +4,7 @@
   description: "Have your own Slack like online chat, built with Meteor."
   uuid: rocketchat-0
   minimum_rancher_version: v0.51.0
-  questions:
+#  questions:
 #    - variable: volume_name
 #      description: "Name of Database Volume"
 #      label: "Database volume"
