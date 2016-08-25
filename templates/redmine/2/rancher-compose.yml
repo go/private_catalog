@@ -7,6 +7,17 @@
   maintainer: "Go Chiba <go.chiba@gmail.com>"
   uuid: redmine-0
 
+lb:
+  scale: 2
+  load_balancer_config:
+    name: lb config
+  health_check:
+    port: 3000
+    interval: 2000
+    unhealthy_threshold: 3
+    healthy_threshold: 2
+    response_timeout: 2000
+
 redmine:
   scale: 1
   retain_ip: true

@@ -1,7 +1,11 @@
+lb:
+  image: rancher/load-balancer-service
+  ports:
+    - 3000
+  links:
+    - redmine:redmine
 redmine:
   image: redmine:3.1
-  ports:
-    - 3000:3000
   environment:
     POSTGRES_PORT_5432_TCP: postgres
     POSTGRES_ENV_POSTGRES_USER: redmine
