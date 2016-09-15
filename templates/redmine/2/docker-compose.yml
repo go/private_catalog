@@ -1,9 +1,14 @@
 lb:
-  image: rancher/load-balancer-service
   ports:
-    - 3000
+  - 80:80
+  labels:
+    io.rancher.loadbalancer.target.redmine: lb.redmine.default.gochiba.net:80=3000
+  tty: true
+  image: rancher/load-balancer-service
   links:
-    - redmine:redmine
+  - redmine:redmine
+  stdin_open: true
+
 redmine:
   image: redmine:latest
   environment:
@@ -15,6 +20,7 @@ redmine:
     - redmine_data:/usr/src/redmine/files
   links:
     - "postgres:postgres"
+
 postgres:
   image: postgres
   environment:
