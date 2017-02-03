@@ -1,0 +1,5 @@
+name: Rancher-NFS
+description: |
+  Custom Rancher-NFS Stack to support host wide shared storage
+version: Latest
+category: Storage
