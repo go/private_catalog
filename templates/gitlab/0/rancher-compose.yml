@@ -41,8 +41,8 @@
       required: true
       default: 22
       type: "string"
-    - variable: "nfs_volume"
-      description: "Name of volume that created by Rancher-NFS"
+    - variable: "volume_name"
+      description: "Name of volume"
       label: "Volume Name:"
       required: true
       type: "string"
