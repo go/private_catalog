@@ -1,0 +1,5 @@
+name: Apache Nifi
+description: |
+  Put simply NiFi was built to automate the flow of data between systems. While the term dataflow is used in a variety of contexts, we use it here to mean the automated and managed flow of information between systems. This problem space has been around ever since enterprises had more than one system, where some of the systems created data and some of the systems consumed data. The problems and solution patterns that emerged have been discussed and articulated extensively. A comprehensive and readily consumed form is found in the Enterprise Integration Patterns.
+version: Latest
+category: BigData
