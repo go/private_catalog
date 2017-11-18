@@ -2,7 +2,7 @@ version: '2'
 
 .catalog:
   name: Cattaz
-  version: 0.0.1
+  version: Latest
   description: |
     Brings all of the activities of the team together at one place.
     Changes team's "Working Style", "Communication", "Motivation".
