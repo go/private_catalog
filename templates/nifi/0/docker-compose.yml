@@ -1,32 +1,8 @@
 version: '2'
 services:
-  ncm:
-    image: aperepel/nifi
+  nifi:
+    image: mderela/apache-nifi
     environment:
-      NIFI_INSTANCE_ROLE: cluster-manager
-      NIFI_UI_BANNER_TEXT: Processing Cluster
+      nifi_ui_banner_text: "${banner_text}"
     ports:
-    - 9091:8080/tcp
-  acquisition:
-    image: aperepel/nifi
-    environment:
-      NIFI_INSTANCE_ROLE: edge
-      NIFI_UI_BANNER_TEXT: Acquisition Node
-    ports:
-    - 9091:8080/tcp
-    - 58338:10000/tcp
-    - 53117:10001/tcp
-    - 52436:10002/tcp
-    - 59273:10003/tcp
-    - 62735:10004/tcp
-  worker:
-    image: aperepel/nifi
-    environment:
-      NIFI_INSTANCE_ROLE: cluster-node
-      NIFI_UI_BANNER_TEXT: Processing Node
-    ports:
-    - 63090:10000/tcp
-    - 52531:10001/tcp
-    - 51520:10002/tcp
-    - 57213:10003/tcp
-    - 61144:10004/tcp
+    - 8080/tcp
