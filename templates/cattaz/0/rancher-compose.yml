@@ -1,0 +1,40 @@
+version: '2'
+
+.catalog:
+  name: Cattaz
+  version: 0.0.1
+  description: |
+    Brings all of the activities of the team together at one place.
+    Changes team's "Working Style", "Communication", "Motivation".
+    It is an evolved Wiki that can launch, organize, accumulate and share knowledge freely using applications tailored to the activities of teams from Markdown.
+  maintainer: "Go Chiba <go.chiba@gmail.com>"
+  uuid: cattaz-0
+
+services:
+  lb:
+    scale: 1
+    start_on_create: true
+    lb_config:
+      certs: []
+      port_rules:
+        - priority: 1
+          protocol: http
+          service: cattaz
+          source_port: 80
+          target_port: 8080
+        - priority: 2
+          protocol: http
+          service: cattaz
+          source_port: 1234
+          target_port: 1234
+      health_check:
+        healthy_threshold: 2
+        resource_timeout: 2000
+        port: 42
+        unhealthy_threshold: 3
+        initializing_timeout: 60000
+        interval: 2000
+        reinitializing_timeout: 60000
+  cattaz:
+    scale: 1
+    start_on_create: true
